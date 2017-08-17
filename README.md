@@ -1,4 +1,4 @@
-# MerakiAnalytics
+# Cisco Meraki Analytics
 Azure PaaS Implementation using Lambda Architecture of Cisco Meraki In-Store Location Analytics
 
 ## **Note:**
@@ -8,6 +8,6 @@ This solution is a quick demonstration of the art of possible for any buildings,
 
 This solution is pre-configured with the Cisco Meraki configuration but can be very easily tailored for other manufacturers. 
 
-High Level Architecture Diagram
+# High Level Architecture Diagram
 
 ![merakidatavisiorevised](https://user-images.githubusercontent.com/31105197/29423338-3d5d95e0-8373-11e7-804c-316d3e005c94.jpg)
