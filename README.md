@@ -1,4 +1,4 @@
-# Cisco Meraki Analytics
+# Cisco Meraki Location Analytics
 Azure PaaS Implementation using Lambda Architecture of Cisco Meraki In-Store Location Analytics
 
 ## **Note:**
