@@ -1,8 +1,0 @@
-select count(distinct customer_key) as count_distinct_customers,
-campaign_code
-from anonymised_protagona_comm_log 
-where campaign_code like '%AA_MBR_ACQ_LAP_CLO_DM%'
-group by campaign_code order by campaign_code
-
-Select count(*) as cnt from anonymised_protagona_comm_log
-

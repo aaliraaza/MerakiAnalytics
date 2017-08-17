@@ -1,1 +1,0 @@
-﻿SELECT * FROM proj_galedb.dimcustomers Limit 10;
