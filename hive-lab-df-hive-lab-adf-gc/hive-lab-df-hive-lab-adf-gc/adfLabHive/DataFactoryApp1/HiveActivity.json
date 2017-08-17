@@ -1,0 +1,34 @@
+﻿{
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json",
+  "name": "HiveActivity",
+  "properties": {
+    "description": "Calculate number of visits",
+    "activities": [
+      {
+        "name": "HiveActivityTemplate",
+        "type": "HDInsightHive",
+        "linkedServiceName": "HDInsightOnDemandLinkedService",
+        "inputs": [
+          {
+            "name": "RGDSxVisitsBaseLocation"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "RGDS_gr_numvisits"
+          }
+        ],
+        "typeProperties": {
+          "scriptPath": "adfhivescripts/Proj_GaleMicrosegmentation/test_visits.hql",
+          "scriptLinkedService": "RGDSAdlDevLinkedService"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        }
+      }
+    ],
+    "start": "2017-02-07T00:00:00Z",
+    "end": "2017-02-12T00:00:00Z"
+  }
+}

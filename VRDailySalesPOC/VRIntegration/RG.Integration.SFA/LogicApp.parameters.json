@@ -1,0 +1,50 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+
+    "LA_API_Version": {
+      "value": "2016-06-01"
+    },
+    "LA_Publisher_Name": {
+      "value": "LA.Publisher.SalesData"
+    },
+    "LA_Subscriber_Name": {
+      "value": "LA.Subscriber.MRI"
+    },
+    "LA_Logging_Name": {
+      "value": "LA.Logging.SalesData"
+    },
+    "serviceBusConnectionString": {
+      //"value": "Endpoint=sb://sbvalueretaildev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CAHcbvoBQEmi6Pm7pRthVlgtNVXa0aRQFWGMjOIQyvI=",
+      "value": "Endpoint=sb: //vrservicebusnstest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=DgrUCEVO6/6uq39vqLL8mvZkGxuDPfT6ijwxnxZYCW0="
+    },
+    "serviceBusConnectionStringdisplayName": {
+      "value": "apiconn_vrservicebusns"
+    },
+    "SQL_Server_Name": {
+      "value": "vrintegrationloggingtest.database.windows.net"
+    },
+    "SQL_Database_Name": {
+      "value": "SFALogging"
+    },
+    "SQL_Username": {
+      "value": "sfaintegration"
+    },
+    "SQL_Password": {
+      "value": "password1#"
+    },
+    "integrationAccountRGName": {
+      "value": "RG.IntegrationAccount"
+    },
+    "integrationAccountName": {
+      "value": "IAValueRetailTest"
+    },
+    "functionsRGName": {
+      "value": "RG.Integration.SFA"
+    },
+    "functionsContainerAppName": {
+      "value": "FunctionAppIntegration"
+    }
+  }
+}

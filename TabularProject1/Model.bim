@@ -1,0 +1,27 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-GB",
+    "dataSources": [
+      {
+        "name": "SqlServer 52.164.244.103 AdventureWorksDW2012",
+        "connectionString": "Provider=SQLNCLI11;Data Source=52.164.244.103;Persist Security Info=true;User ID=ssastestvm;Initial Catalog=AdventureWorksDW2012",
+        "impersonationMode": "impersonateUnattendedAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

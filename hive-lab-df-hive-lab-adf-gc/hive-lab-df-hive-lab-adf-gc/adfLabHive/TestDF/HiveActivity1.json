@@ -1,0 +1,42 @@
+﻿{
+  "name": "MyFirstPipeline",
+  "properties": {
+    "description": "My first Azure Data Factory pipeline",
+    "activities": [
+      {
+        "type": "HDInsightHive",
+        "typeProperties": {
+          "scriptPath": "adfgetstarted/script/partitionweblogs.hql",
+          "scriptLinkedService": "AzureStorageLinkedService1",
+          "defines": {
+            "inputtable": "wasb://adfgetstarted@hiveadfteststorage.blob.core.windows.net/inputdata/",
+            "partitionedtable": "wasb://adfgetstarted@hiveadfteststorage.blob.core.windows.net/partitioneddata/"
+          }
+        },
+        "inputs": [
+          {
+            "name": "AzureBlobInput"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "AzureBlobOutput"
+          }
+        ],
+        "policy": {
+          "concurrency": 1,
+          "retry": 3
+        },
+        "scheduler": {
+          "frequency": "Month",
+          "interval": 1
+        },
+        "name": "RunSampleHiveActivity",
+        "linkedServiceName": "HDInsightOnDemandLinkedService"
+      }
+    ],
+    "start": "2016-04-01T00:00:00Z",
+    "end": "2016-04-02T00:00:00Z",
+    "isPaused": false
+  }
+}

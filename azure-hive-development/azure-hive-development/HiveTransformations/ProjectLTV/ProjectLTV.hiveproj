@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>778dee40-10e5-4a97-aabe-13f6b09bb6ad</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Hive</AssemblyName>
+    <StartFile>Script.hql</StartFile>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Name>ProjectLTV</Name>
+    <RootNamespace>ProjectLTV</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="create_groupgame_table.hql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="create_support_data.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_gross_game_action_table.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_game_data_fields.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_actiontype_table.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="game_data.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GROS_gamegroups.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_gros_game_activity_data_table.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_FIX_table.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_game_data_gros_fields.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="insert_game_gros_data_map.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="populate_gros_game_data.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="game_data_gros_features.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="populate_gros_features_data.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CustomerView.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ImportDataFromCSV.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Testing.hql">
+	<SubType>Content</SubType>
+    </Content>
+    <Content Include="check_churned_cust.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="get_daily_hold_from_game_data_.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="create_customer_status.hql">
+
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataLake\MsBuild\1.0\Hive.targets" />
+</Project>

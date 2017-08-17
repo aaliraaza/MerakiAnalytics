@@ -1,0 +1,10 @@
+﻿{
+    "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json",
+    "name": "hiveMetastoreLinkedService",
+    "properties": {
+        "type": "AzureSqlDatabase",
+      "typeProperties": {
+        "connectionString": "Data Source=tcp:rgdsadlmetasql.database.windows.net,1433;Initial Catalog=rgdsadlmetastore;User ID=rgdsadmin@rgdsadlmetasql;Password=RankGroup01;Integrated Security=False;Encrypt=True;Connect Timeout=30"
+      }
+    }
+}

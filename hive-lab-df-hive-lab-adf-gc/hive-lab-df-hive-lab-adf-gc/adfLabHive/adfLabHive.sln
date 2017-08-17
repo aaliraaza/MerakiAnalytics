@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{3466B219-07DB-46AE-8697-CFD2A1650EC8}") = "HiveActivityDF", "DataFactoryApp1\HiveActivityDF.dfproj", "{7FDC2B3F-2E59-41CB-8186-4F849E5969F7}"
+EndProject
+Project("{3466B219-07DB-46AE-8697-CFD2A1650EC8}") = "TestDF", "TestDF\TestDF.dfproj", "{1469BBB7-8EDB-4BCE-A3A1-C82409488383}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FDC2B3F-2E59-41CB-8186-4F849E5969F7}.Debug|x86.ActiveCfg = Debug|x86
+		{7FDC2B3F-2E59-41CB-8186-4F849E5969F7}.Debug|x86.Build.0 = Debug|x86
+		{7FDC2B3F-2E59-41CB-8186-4F849E5969F7}.Release|x86.ActiveCfg = Release|x86
+		{7FDC2B3F-2E59-41CB-8186-4F849E5969F7}.Release|x86.Build.0 = Release|x86
+		{1469BBB7-8EDB-4BCE-A3A1-C82409488383}.Debug|x86.ActiveCfg = Debug|x86
+		{1469BBB7-8EDB-4BCE-A3A1-C82409488383}.Debug|x86.Build.0 = Debug|x86
+		{1469BBB7-8EDB-4BCE-A3A1-C82409488383}.Release|x86.ActiveCfg = Release|x86
+		{1469BBB7-8EDB-4BCE-A3A1-C82409488383}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,98 @@
+{
+  "$schema": "http://schemas.management.azure.com/schemas/2015-01-01-preview/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sites_messagetypeparser_name": {
+      "type": "string"
+    },
+    "serverfarms_ASPlan_name": {
+      "type": "String"
+    },
+    "appName": {
+      "type": "string"
+    },
+    "storageAccountType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Standard_GRS",
+        "Standard_ZRS",
+        "Premium_LRS"
+      ],
+      "metadata": {
+        "description": "Storage Account type"
+      }
+    }
+  },
+  "variables": {
+    "functionAppName": "[parameters('appName')]",
+    "hostingPlanName": "[parameters('appName')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'functions')]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "accountType": "[parameters('storageAccountType')]"
+      }
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/59917f2a-0c8e-4062-a7eb-13897b2d7cdd/resourceGroups/RG-Kingston-POC/providers/Microsoft.Web/serverfarms/ASPlan'.",
+      "type": "Microsoft.Web/serverfarms",
+      "sku": {
+        "name": "S1",
+        "tier": "Standard",
+        "size": "S1",
+        "family": "S",
+        "capacity": 1
+      },
+      "name": "[parameters('serverfarms_ASPlan_name')]",
+      "apiVersion": "2015-08-01",
+      "location": "West Europe",
+      "properties": {
+        "name": "[parameters('serverfarms_ASPlan_name')]",
+        "numberOfWorkers": 1
+      },
+      "resources": [],
+      "dependsOn": []
+    },
+    {
+      "comments": "Generalized from resource: '/subscriptions/59917f2a-0c8e-4062-a7eb-13897b2d7cdd/resourceGroups/RG-Kingston-POC/providers/Microsoft.Web/sites/messagetypeparser'.",
+      "type": "Microsoft.Web/sites",
+      "kind": "functionapp",
+      "name": "[parameters('sites_messagetypeparser_name')]",
+      "apiVersion": "2015-08-01",
+      "location": "West Europe",
+      "tags": {
+        "hidden-related:/subscriptions/59917f2a-0c8e-4062-a7eb-13897b2d7cdd/resourcegroups/RG-Kingston-POC/providers/Microsoft.Web/serverfarms/ASPlan": "empty"
+      },
+      "properties": {
+        "name": "[parameters('sites_messagetypeparser_name')]",
+
+        //"hostNameSslStates": [
+        //  {
+        //    "name": "[concat(parameters('sites_messagetypeparser_name'),'.azurewebsites.net')]",
+        //    "sslState": 0,
+        //    "thumbprint": null,
+        //    "ipBasedSslState": 0
+        //  },
+        //  {
+        //    "name": "[concat(parameters('sites_messagetypeparser_name'),'.scm.azurewebsites.net')]",
+        //    "sslState": 0,
+        //    "thumbprint": null,
+        //    "ipBasedSslState": 0
+        //  }
+        //],
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ASPlan_name'))]"
+      },
+      "resources": [],
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_ASPlan_name'))]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccounts_merakiciscostorage_name": {
+      "type": "string"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "comments": "Generalized from resource: '/subscriptions/2590774c-7d67-440f-bd7d-ab955c9faf19/resourceGroups/merakirg/providers/Microsoft.Storage/storageAccounts/merakiciscostorage'.",
+      "type": "Microsoft.Storage/storageAccounts",
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "kind": "Storage",
+      "name": "[parameters('storageAccounts_merakiciscostorage_name')]",
+      "apiVersion": "2016-01-01",
+      "location": "northeurope",
+      "tags": {},
+      "scale": null,
+      "properties": {},
+      "dependsOn": []
+    }
+  ],
+  "outputs": {}
+}

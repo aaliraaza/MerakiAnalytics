@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7fdc2b3f-2e59-41cb-8186-4f849e5969f7</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>DataFactory</AssemblyName>
+    <ApiVersion>2015-09-01</ApiVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Name>HiveActivityDF</Name>
+    <RootNamespace>DataFactoryApp1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ADFConfigFileToPublish>
+    </ADFConfigFileToPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Dependencies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Include="base_gros_retail_numvisits.json" />
+    <Script Include="base_xChannelVisits_Table.json" />
+    <Script Include="HiveActivity.json" />
+    <Script Include="hiveMetastoreLinkedService.json" />
+    <Script Include="base_StorageLinkedService.json" />
+    <Script Include="HDInsightOnDemandLinkedService.json" />
+    <Script Include="RgdsADLTEMP_StorageLinkedService.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dependencies\retail_gros_NumVisits.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\test_visits.hql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataFactory Tools for Visual Studio\MsBuild\1.0\DataFactory.targets" />
+</Project>

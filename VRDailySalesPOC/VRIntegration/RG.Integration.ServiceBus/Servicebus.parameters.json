@@ -1,0 +1,34 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "serviceBusNamespaceName": {
+      "value": "vrservicebusnsdemo"
+    },
+    "namespaceAuthorizationRuleName": {
+      "value": "RootManageSharedAccessKey"
+    },
+    //topics
+    "topics_salesinformation_name": {
+      "value": "salesinformation"
+    },
+    "topics_retrysalesinformation_name": {
+      "value": "retrysalesinformation"
+    },
+
+    //Subscriptions
+    "subscriptions_salesinformation_name": {
+      "value": "SalesInformationSubscription"
+    },
+    "subscriptions_retrysalesinformation_name": {
+      "value": "RetrySalesInformationSubscription"
+    },
+
+    "serviceBusApiVersion": {
+      "value": "2015-08-01"
+    },
+      "subscriptions_salesinformation_name": {
+          "value": "SalesInformationSubscription"
+      }
+  }
+}

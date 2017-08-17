@@ -1,0 +1,122 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+  "parameters": {
+    "LA_API_Version": {
+      "value": "2016-06-01"
+    },
+    "serviceBusConnectionString": {
+      //"value": "Endpoint=sb://kuservicebusnsdevci.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=lqhaAAcwJ0tCyQvzuCZup/BpWREFjSZ4QgPEOVS28GU=",
+      "value": "Endpoint=sb://kuservicebusnamespace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=691naH5FSk32uVFbnJr7rYlKPlzuYw8Y7bIGEd0pLsw="
+      //"value": "Endpoint=sb://kuservicebusnstest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=z+Q9xo6wzbWXqROYpQwrCkOihc1fIyRI4QAsMGfX0sE="
+
+    },
+    "serviceBusConnectionStringdisplayName": {
+      "value": "apiconn_kuservicebusns"
+    },
+    "LA_CreateUser_Name": {
+      "value": "LA.CreateUser.Canvas"
+    },
+    "LA_EditUser_Name": {
+      "value": "LA.EditUser.Canvas"
+    },
+    "LA_CreateTerm_Name": {
+      "value": "LA.CreateTerm.Canvas"
+    },
+    "LA_EditTerm_Name": {
+      "value": "LA.EditTerm.Canvas"
+    },
+    "LA_CreateCourse_Name": {
+      "value": "LA.CreateCourse.Canvas"
+    },
+    "LA_EditCourse_Name": {
+      "value": "LA.EditCourse.Canvas"
+    },
+    "LA_CreateGroup_Name": {
+      "value": "LA.CreateGroup.Canvas"
+    },
+    "LA_CreateStaff_Name": {
+      "value": "LA.CreateStaff.Canvas"
+    },
+    "LA_DeleteCourse_Name": {
+      "value": "LA.DeleteCourse.Canvas"
+    },
+    "LA_DeleteCourseEnrollment_Name": {
+      "value": "LA.DeleteCourseEnrollment.Canvas"
+    },
+    "LA_DeleteGroupMembership_Name": {
+      "value": "LA.DeleteGroupMembership.Canvas"
+    },
+    "LA_EditCourseEnrollment_Name": {
+      "value": "LA.EditCourseEnrollment.Canvas"
+    },
+    "LA_EditCourseEnrollmentHelper_Name": {
+      "value": "LA.EditCourseEnrollmentHelper.Canvas"
+    },
+    "LA_EnrollUserCourse_Name": {
+      "value": "LA.EnrollUserCourse.Canvas"
+    },
+    "LA_StaffInformation_Publish_Name": {
+      "value": "LA.StaffInformation.Publish"
+    },
+    "LA_StudentInformation_Publish_Name": {
+      "value": "LA.StudentInformation.Publish"
+    },
+    "LA_Logging_StudentPublisher_Name": {
+      "value": "LA.Logging.StudentPublisher"
+    },
+    "LA_Logging_CanvasSubscriber_Name": {
+      "value": "LA.Logging.CanvasSubscriber"
+    },
+    "integrationAccountRGName": {
+      "value": "RG.IntegrationAccount"
+    },
+    "SQL_Server_Name": {
+      "value": "kuintegrationloggingprod.database.windows.net"
+    },
+    "SQL_Database_Name": {
+      "value": "canvaslogging"
+    },
+    "SQL_Username": {
+      "value": "canvasintegration"
+    },
+    "SQL_Password": {
+      "value": "password1#"
+    },
+    "integrationAccountName": {
+      //"value": "IACanvasTest",
+      "value": "CanvasIntegrationAccount"
+    },
+    "functionsRGName": {
+      "value": "RG.Integration.Canvas"
+    },
+    "functionsContainerAppName": {
+      //"value": "FACanvasIntegrationTest",
+      "value": "FACanvasIntegration"
+    },
+    "apimRGName": {
+      "value": "RG.ApiManagement"
+    },
+    "apimInstanceName": {
+      "value": "kingstonuniversity"
+    },
+    "apim_service_canvas": {
+      "value": "57e3fbb6ab693f075c438a7b"
+    },
+    "apim_service_logging": {
+      "value": "581f4ca6ab693f10e8a7db95"
+    },
+    "apim_service_canvas_subscriptionkey": {
+      //test
+      //"value": "4f7bed81a96c4356ac6de02208bb42bf",
+      //prod
+      "value": "63272854e490438d9fdd5c327733adbc"
+    },
+    "apim_service_logging_subscriptionkey": {
+      //test
+      //"value": "1869f0460e5c46cd89ae8f42c9420fbf",
+      //Prod
+      "value": "21529e0f3eb340f99c420a3141f48222"
+    }
+  }
+}

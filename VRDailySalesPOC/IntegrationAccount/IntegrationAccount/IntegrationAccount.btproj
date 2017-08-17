@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B2FCF896-6134-42DD-A662-FED6C8BB2055}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>IntegrationAccount</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Schema Include="Sfa_SalesInformation.xsd">
+      <SubType>Task</SubType>
+      <TypeName>Sfa_SalesInformation</TypeName>
+      <Namespace>IntegrationAccount</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Canonical_SalesInformation.xsd">
+      <SubType>Task</SubType>
+      <TypeName>Canonical_SalesInformation</TypeName>
+      <Namespace>IntegrationAccount</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Mri_SalesInformation.xsd">
+      <SubType>Task</SubType>
+      <TypeName>Mri_SalesInformation</TypeName>
+      <Namespace>IntegrationAccount</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="SfaSalesInformationToCanonicalSalesInformation.btm">
+      <TypeName>SfaSalesInformationToCanonicalSalesInformation</TypeName>
+      <Namespace>IntegrationAccount</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="CanonicalSalesInformationToMriSalesInformation.btm">
+      <TypeName>CanonicalSalesInformationToMriSalesInformation</TypeName>
+      <Namespace>IntegrationAccount</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.CurrentVersion.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Azure Integration SDK\IntegrationTasks.targets" />
+</Project>

@@ -1,0 +1,10 @@
+﻿{
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json",
+  "name": "RGDSAdlDevLinkedService",
+  "properties": {
+    "type": "AzureStorage",
+    "typeProperties": {
+      "connectionString": "DefaultEndpointsProtocol=https;AccountName=rgdsadldev;AccountKey=dCSAvZxtomYzDMuCu3d0IGq6W5ei4aOKY9VspOIuYeuXPKTyEnNF+BE9RRNmNhxa95UagEV5Y8EFDc2XjQ1zFg=="
+    }
+  }
+}

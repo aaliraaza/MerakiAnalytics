@@ -1,0 +1,21 @@
+﻿{
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json",
+  "name": "RGDSxVisitsBaseLocation",
+  "properties": {
+    "type": "AzureBlob",
+    "linkedServiceName": "RGDSAdlDevLinkedService",
+    "structure": [],
+    "typeProperties": {
+      "folderPath": "raw/RAP_vwVisits/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": "|"
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true
+  }
+}

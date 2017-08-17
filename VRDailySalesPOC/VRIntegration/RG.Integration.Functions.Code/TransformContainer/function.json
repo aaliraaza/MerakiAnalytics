@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "webHookType": "genericJson",
+      "direction": "in",
+      "type": "httpTrigger"
+    },
+    {
+      "name": "res",
+      "direction": "out",
+      "type": "http"
+    }
+  ]
+}

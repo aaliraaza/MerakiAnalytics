@@ -1,0 +1,16 @@
+﻿{
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json",
+  "name": "HDInsightOnDemandLinkedService",
+  "properties": {
+    "type": "HDInsight",
+    "typeProperties": {
+      "clusterUri": "https://rgdshdidev.azurehdinsight.net",
+      "userName": "datascience",
+      "password": "RankGroup01#ds",
+      "linkedServiceName": "RGDSAdlTemp",
+      "hcatalogLinkedServiceName": "hiveMetastoreLinkedService"
+    }
+  }
+}
+
+

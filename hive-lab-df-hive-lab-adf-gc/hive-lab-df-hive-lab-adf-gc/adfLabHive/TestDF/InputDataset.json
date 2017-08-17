@@ -1,0 +1,21 @@
+﻿{
+  "name": "AzureBlobInput",
+  "properties": {
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService1",
+    "typeProperties": {
+      "fileName": "input.log",
+      "folderPath": "adfgetstarted/inputdata/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Month",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  }
+}

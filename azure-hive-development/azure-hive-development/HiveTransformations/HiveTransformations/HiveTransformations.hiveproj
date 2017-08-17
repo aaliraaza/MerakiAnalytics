@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>dabebede-ff1f-48a1-8d38-2b078fa4f951</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Hive</AssemblyName>
+    <StartFile>Script.hql</StartFile>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Name>HiveTransformations</Name>
+    <RootNamespace>HiveTransformations</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="Create_tGames.hql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SelectTable.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GilbertTest.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TestScript.hql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataLake\MsBuild\1.0\Hive.targets" />
+</Project>

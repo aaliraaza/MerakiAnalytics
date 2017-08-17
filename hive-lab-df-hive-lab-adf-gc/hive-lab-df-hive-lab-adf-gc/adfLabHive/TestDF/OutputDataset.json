@@ -1,0 +1,18 @@
+﻿{
+  "name": "AzureBlobOutput",
+  "properties": {
+    "type": "AzureBlob",
+    "linkedServiceName": "AzureStorageLinkedService1",
+    "typeProperties": {
+      "folderPath": "adfgetstarted/partitioneddata/",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ","
+      }
+    },
+    "availability": {
+      "frequency": "Month",
+      "interval": 1
+    }
+  }
+}

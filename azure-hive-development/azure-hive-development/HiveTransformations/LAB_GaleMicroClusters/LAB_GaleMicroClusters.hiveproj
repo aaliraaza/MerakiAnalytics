@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f3360904-1dd6-40e0-a331-c4032662f00c</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Hive</AssemblyName>
+    <StartFile>Script.hql</StartFile>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Name>LAB_GaleMicroClusters</Name>
+    <RootNamespace>LAB_GaleMicroClusters</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="digital_spend.hql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Create_retail_gros_tCentroids.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Create_digital_mecc_tCentroids.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Create_retail_mecc_tCentroids.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="customer_tenure.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="digital_vip.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="microcluster_analysis.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_AgeBands.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_ClubEntropy.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_NumVisits.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_PercVisits.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_percVisitsByArea.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_percVisitsByClub.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_gros_TenureBands.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecca_NumVisits.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecc_NumClubs.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecc_PercVisits.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecc_AgeBand.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecc_percVisitsByClub.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="retail_mecc_Tenure.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="segment_scoring_gros.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="segment_scoring_mecc_digital.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="segment_scoring_mecc_retail.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="gale_tCustomer_features.hql">
+	<SubType>Content</SubType>
+    </Content>
+    <Content Include="digital_game_entropy.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="external_data.hql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="has_played_digital.hql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataLake\MsBuild\1.0\Hive.targets" />
+</Project>
