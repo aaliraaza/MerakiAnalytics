@@ -54,7 +54,7 @@ namespace MerakiCisco
         private void PostFile(HttpContext context)
         {
             string dt = string.Format("text-{0:yyyy-MM-dd_hh-mm-ss-tt}", DateTime.Now);
-            var ehClient = EventHubClient.CreateFromConnectionString("Endpoint=sb://merakinstest1.servicebus.windows.net/;SharedAccessKeyName=ManagePolicy;SharedAccessKey=StnDcVm4L0rQjiDb/txGNzo6FF/Nt1ZT7PJIi6A4ens=;EntityPath=merakieventhub1");
+            var ehClient = EventHubClient.CreateFromConnectionString("Endpoint=sb://merakinstest1.servicebus.windows.net/;SharedAccessKeyName=ManagePolicy;SharedAccessKey=StnDcVm4L0rQjiDb/txGNzo6FF/Nt1ZT7PJIi6A4ens=;EntityPath=meraki");
             var jsonString = String.Empty;
             try
             {
