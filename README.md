@@ -141,7 +141,8 @@ https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introdu
 
 Browse: https://portal.azure.com
 1. Click: **STREAM ANALYTICS** > **streamanalyticsjob[*unique*]** > Click on Query > Goto solution explorer look for StreamAnalyticsJobQuery.sql file under scripts folder > Copy and paste that in the Query window
-1. Now: Add Inputs / Outputs based on following diagram with same **names specified**
+1. Select: Add Inputs / Outputs based on following diagram with same **names specified** to match the query outputs
+1.  Click: **Finish** > **Start** > **Finish** (You do not need to specify a custom time)
 
 ![StreamAnalytics-image](./media/streamanalytics.png)
 
