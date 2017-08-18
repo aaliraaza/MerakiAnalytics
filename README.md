@@ -114,9 +114,15 @@ This is currently created with 1 Throughput Unit.
    1. Click: **OK**
 
 ## Azure Web App
-https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-what-is-event-hubs
 
-**Before deploying the web app go to Event Hubs in the portal grab the Connection String**
+**Before deploying the web app go to Event Hubs in the portal grab the Connection String Primary from under Consumer groups section by clicking on Shared access policies--> ManagePolicy**
+
+![ManagePolicy-image](./media/ManagePolicy.png)
+
+
+**After grabbing that paste that in the <MerakiCisco> project within Handler.ashx file where the Event Hub connection string currently applied, finally, Rebuild the project for the settings to apply.** 
+
+Now, follow the steps below to deploy the MerakiWebApp project:
 
 1. Parameters
    1. Right-Click on MerakiWebAPP Project in Solution Explorer 
@@ -133,16 +139,30 @@ https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introdu
    1. Click: Edit Paramters (If you need to change default values)
    1. Click: **OK**
 
-Browse: https://manage.windowsazure.com
-1. Click: **STREAM ANALYTICS** > **personalstreamanalytics[*unique*]** > **OUTPUTS** > **ADD OUTPUT**
-1. Select: **Power BI**
-1. Click: **Next** > **Authorize Now** (Login with your credentials)
-1. Type: OUTPUT ALIAS: **OutputPowerBI**
-1. Type: DATASET NAME: **personalDB** (This dataset will be overwritten in PBI should it already exist)
-1. Type: TABLE NAME: **personalDB**
-1. Select: WORKSPACE: **My Workspace** (Default)
-1. Click: **Finish** > **Start** > **Finish** (You do not need to specify a custom time)
+Browse: https://portal.azure.com
+1. Click: **STREAM ANALYTICS** > **streamanalyticsjob[*unique*]** > Click on Query > Goto solution explorer look for StreamAnalyticsJobQuery.sql file under scripts folder > Copy and paste that in the Query window
+1. Now: Add Inputs / Outputs based on following diagram with same **names specified**
 
+![StreamAnalytics-image](./media/streamanalytics.png)
+
+
+## Create the PBI dashboard
+
+### Realtime visualization
+
+1. Browse: https://powerbi.microsoft.com
+1. Click: **Sign in** (Login with your credentials)
+1. Show: The navigation pane
+1. Click: **meraki** (Under the Datasets folder > **Line chart** # Under Visualizations)
+1. Drag: **seentimeime**: To: **Axis**
+1. Drag: **apfloors**: To: **Legend**
+1. Drag: **clientmac**: To: **Values**
+1. Click: **Save**
+1. Type: Name: **MerakiReport**
+1. Click: **Save** > **Pin visual** (pin icon on upper-right)
+1. Select: **New dashboard**
+1. Type: Name: **MerakiDashboard**
+1. Click: **Pin**
 
 ## TODOs
 - Use Https for communication between Meraki API and Web APP Endpoint (Currently going through a process to get it implemneted with the help of Cisco)
