@@ -53,7 +53,7 @@ https://docs.microsoft.com/en-us/azure/storage/storage-introduction#blob-storage
    1. Click: **OK**
 
 
-## Azure SQL (This setup is for Batch Analytics / Processing)
+## Azure SQL (Batch Analytics / Processing)
 https://docs.microsoft.com/en-us/azure/storage/storage-introduction#blob-storage
 
 1. Parameters
