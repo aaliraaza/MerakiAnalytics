@@ -8,7 +8,7 @@ Azure PaaS Implementation using Lambda Architecture of Cisco Meraki In-Store Loc
 
 This solution is a quick demonstration of the art of possible for any buildings, retail stores, universities, hospitals equipped with WAPs (Wireless Access Points) using Azure PaaS offering. It enables data ingestion omitted through user mobile devices into Azure Cloud via Meraki Cloud API for analytical purposes i.e. Foot-Fall Analysis, Staff / Store Layout optimisation, Product Recommendation & many other advance use cases.
 
-Along the way you will also be exposed to a number of other Azure components, namely Event Hub, Stream Analytics, and Power BI. When everything is successfully deployed and running, the final result will be a PowerBI dashboard showing the following Line chart for real time footfall captured via user mobile devices and further Dashboards visualisations can be added after batch aggregation / analysis.
+Along the way you will also be exposed to a number of other Azure components, namely Event Hub, Stream Analytics, and Power BI. When everything is successfully deployed and running, the final result will be a PowerBI dashboard showing the following Line chart for real time footfall captured via user mobile devices and further Dashboard visualisations can be added after batch aggregation / analysis.
 
 ![dashboard](https://user-images.githubusercontent.com/31105197/29453710-7f8b1642-8402-11e7-9f3f-99b90d96c39c.png)
 
