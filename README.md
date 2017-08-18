@@ -36,7 +36,8 @@ Along the way you will also be exposed to a number of other Azure components, na
 
 Below are the steps to deploy the use case into your Azure subscription.
 
-**Clone or download the code from Github repositry and open the solution file in Visual Studio 2015. It will look like the following:
+**Clone or download the code from Github repositry and open the solution file in Visual Studio 2015. It will look like the following:**
+
 ![solutionimage](https://user-images.githubusercontent.com/31105197/29456731-0c7034e6-840f-11e7-980d-82288bb99380.png)
 
 
