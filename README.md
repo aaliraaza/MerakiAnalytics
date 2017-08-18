@@ -77,7 +77,7 @@ Next you need to create the matching tables in the SQL Data Warehouse. You can d
 1. Select: **New Query...**
 1. Copy and paste:
 
-CREATE TABLE [dbo].[tblMeraki] (
+ CREATE TABLE [dbo].[tblMeraki] (
     [Id]           INT          IDENTITY (1, 1) NOT NULL,
     [Version]      VARCHAR (5)  NULL,
     [Secret]       VARCHAR (50) NULL,
@@ -99,8 +99,6 @@ CREATE TABLE [dbo].[tblMeraki] (
     [rssi]         VARCHAR (50) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
-
-GO
 
 1. Click: **Execute**
 
