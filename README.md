@@ -10,7 +10,7 @@ This solution is a quick demonstration of the art of possible for any buildings,
 
 Along the way you will also be exposed to a number of other Azure components, namely Event Hub, Stream Analytics, and Power BI. When everything is successfully deployed and running, the final result will be a PowerBI dashboard showing the following Line chart for real time footfall captured via user mobile devices and further Dashboards visualisations can be added after batch aggregation / analysis.
 
-
+![dashboard](https://user-images.githubusercontent.com/31105197/29453710-7f8b1642-8402-11e7-9f3f-99b90d96c39c.png)
 
 This solution is pre-configured with the Cisco Meraki settings but can be very easily tailored for other manufacturers. 
 
