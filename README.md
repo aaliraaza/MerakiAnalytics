@@ -3,6 +3,7 @@ Azure PaaS Implementation using Lambda Architecture of Cisco Meraki In-Store Loc
 
 ## **Note:**
 > This solution is not production ready as it requires security hardening and relevant scaling based on specific customer environments. 
+> Also, this will give you end-to-end plumbing of required Azure components to get started with basic visualistions / Insights, which can be extended based on requirements.
 
 ## Use Case
 
@@ -119,7 +120,6 @@ This is currently created with 1 Throughput Unit.
 
 ![ManagePolicy-image](./media/ManagePolicy.png)
 
-
 **After grabbing that paste that in the <MerakiCisco> project within Handler.ashx file where the Event Hub connection string currently applied, finally, Rebuild the project for the settings to apply.** 
 
 Now, follow the steps below to deploy the MerakiWebApp project:
@@ -168,6 +168,7 @@ Browse: https://portal.azure.com
 ## TODOs
 - Use Https for communication between Meraki API and Web APP Endpoint (Currently going through a process to get it implemneted with the help of Cisco)
 - Streamline script outputs
+- Add Batch Processing Power BI Visualisations for interesting insights i.e. floor plans mapping etc.
 - Add error handling
 - Automate Stream Analytics Input/Output and Query sections
 
