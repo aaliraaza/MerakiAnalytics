@@ -113,6 +113,17 @@ This is currently created with 1 Throughput Unit.
    1. Click: Edit Paramters (If you need to change default values)
    1. Click: **OK**
 
+## Azure Web App
+https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-what-is-event-hubs
+
+**Before deploying the web app go to Event Hubs in the portal grab the Connection String**
+
+1. Parameters
+   1. Right-Click on MerakiWebAPP Project in Solution Explorer 
+   1. Change: LOCATION: **[*LOCATION*]** (The region where everything will be deployed) and Other properties as needed
+   1. Click: Edit Paramters (If you need to change default values)
+   1. Click: **OK**
+
 ## Azure Stream Analytics
 https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction
 
@@ -122,6 +133,15 @@ https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introdu
    1. Click: Edit Paramters (If you need to change default values)
    1. Click: **OK**
 
+Browse: https://manage.windowsazure.com
+1. Click: **STREAM ANALYTICS** > **personalstreamanalytics[*unique*]** > **OUTPUTS** > **ADD OUTPUT**
+1. Select: **Power BI**
+1. Click: **Next** > **Authorize Now** (Login with your credentials)
+1. Type: OUTPUT ALIAS: **OutputPowerBI**
+1. Type: DATASET NAME: **personalDB** (This dataset will be overwritten in PBI should it already exist)
+1. Type: TABLE NAME: **personalDB**
+1. Select: WORKSPACE: **My Workspace** (Default)
+1. Click: **Finish** > **Start** > **Finish** (You do not need to specify a custom time)
 
 
 ## TODOs
