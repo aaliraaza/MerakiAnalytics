@@ -139,6 +139,10 @@ https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introdu
    1. Click: Edit Paramters (If you need to change default values)
    1. Click: **OK**
 
+**For further details on how to create Inputs/Outputs for Stream Analytics refer to following links**
+https://docs.microsoft.com/en-gb/azure/stream-analytics/stream-analytics-define-inputs#create-data-stream-input-from-event-hubs
+https://docs.microsoft.com/en-gb/azure/stream-analytics/stream-analytics-define-outputs
+
 Browse: https://portal.azure.com
 1. Click: **STREAM ANALYTICS** > **streamanalyticsjob[*unique*]** > Click on Query > Goto solution explorer look for StreamAnalyticsJobQuery.sql file under scripts folder > Copy and paste that in the Query window
 1. Select: Add Inputs / Outputs based on following diagram with same **names specified** to match the query outputs
@@ -146,6 +150,17 @@ Browse: https://portal.azure.com
 
 ![StreamAnalytics-image](./media/streamanalytics.png)
 
+## Test
+
+**In Order to confirm that all the above plumbing of Azure components is working as expected before visualising the Real-time output in Power BI would required a quick test as following:**
+
+Download or Install either Fiddler / Postman or any web debugger tool for creating Http GET/POST requests:
+https://www.telerik.com/download/fiddler
+
+- Goto Solution explorer and copy the test data from "merakitestdata.json" file under scripts and paste in the Request Body of the fiddler tool as shown in the following image:
+![fiddler-image](./media/fiddler.png)
+
+- If the test shows "Status" 200 as shown in the image then all the integration worked as expected and outputs can be visualised using the following Power BI Setup.
 
 ## Create the PBI dashboard
 
