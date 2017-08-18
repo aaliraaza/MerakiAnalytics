@@ -158,6 +158,7 @@ Download or Install either Fiddler / Postman or any web debugger tool for creati
 https://www.telerik.com/download/fiddler
 
 - Goto Solution explorer and copy the test data from "merakitestdata.json" file under scripts and paste in the Request Body of the fiddler tool as shown in the following image:
+- Get the ** deployed MerakiCisco website URL** from Azure Portal for the deployed web app and paste it in the URL section under "Composer Tab" next to POST method (as highlighted in the image)
 ![fiddler-image](./media/fiddler.png)
 
 - If the test shows "Status" 200 as shown in the image then all the integration worked as expected and outputs can be visualised using the following Power BI Setup.
