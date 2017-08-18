@@ -18,7 +18,7 @@ Along the way you will also be exposed to a number of other Azure components, na
 
 ![dashboard](https://user-images.githubusercontent.com/31105197/29453710-7f8b1642-8402-11e7-9f3f-99b90d96c39c.png)
 
-This solution is pre-configured with the Cisco Meraki settings but can be very easily tailored for other manufacturers. 
+> **Note:** This solution is pre-configured with the Cisco Meraki settings but can be very easily tailored for other manufacturers. 
 
 ## Requirements
 
