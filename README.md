@@ -14,6 +14,14 @@ Along the way you will also be exposed to a number of other Azure components, na
 
 This solution is pre-configured with the Cisco Meraki settings but can be very easily tailored for other manufacturers. 
 
-# High Level Architecture Diagram
+## Requirements
+
+- Microsoft <a href="https://azure.microsoft.com/en-us/">Azure</a> subscription with login credentials
+- <a href="https://powerbi.microsoft.com/">PowerBI</a> subscription with login credentials
+- A local installation of <a href="https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-install-visual-studio/">Visual Studio 2015 with SQL Server Data Tools (SSDT)</a>
+- Azure SDK
+- Nuget Package installtion of "WindowsAzure.ServiceBus" & "WindowsAzure.Storage" from within Visual Studio 2015 -->Project-->Manage NuGet Packages menu option
+
+# High Level Architecture
 
 ![merakidatavisiorevised](https://user-images.githubusercontent.com/31105197/29423338-3d5d95e0-8373-11e7-804c-316d3e005c94.jpg)
