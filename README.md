@@ -1,6 +1,13 @@
 # Cisco Meraki Location Analytics
 Azure PaaS Implementation using Lambda Architecture of Cisco Meraki In-Store Location Analytics
 
+## **What is Cisco Meraki?**
+https://meraki.cisco.com/solutions/location-analytics
+
+Cisco Meraki Location Analytics displays real-time location statistics to improve customer engagement and loyalty across sites, and is built-in to Cisco Meraki APs with no additional cost or complexity. Data collected by APs is synced with the Cisco Meraki cloud with  the flexibility to feed data into custom applications. Integrate with back-end CRM, drive in-store customer engagement through push notifications, or alert staff to VIP customer visits.
+
+**This solution doesn't need the real-time setup as it's got a test data to play with**
+
 ## **Note:**
 > This solution is not production ready as it requires security hardening and relevant scaling based on specific customer environments. 
 > Also, this will give you end-to-end plumbing of required Azure components to get started with basic visualistions / Insights, which can be extended based on requirements.
