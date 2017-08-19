@@ -69,7 +69,7 @@ https://docs.microsoft.com/en-us/azure/storage/storage-introduction#blob-storage
    1. Click: Edit Paramters (If you need to change default values)
    1. Click: **OK**
 
-Next you need to create the matching tables in the SQL Data Warehouse. You can do this by following these steps:
+Next you need to create the following table in the AZURE SQL DB. You can do this by following these steps:
 
 1. Start Visual Studio. Note that you must have installed the SQL Server Data Tools.
 1. Select: View: **SQL Server Object Explorer**
