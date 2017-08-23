@@ -8,7 +8,7 @@ Cisco Meraki Location Analytics displays real-time location statistics to improv
 
 **This solution doesn't need real-time Cisco Meraki setup as it's already got sample data required for end-to-end testing.**
 
-For proper setup please see the following link to get the integration going:
+**For proper setup please see the following link to get the integration working:**
 https://meraki.cisco.com/technologies/location-analytics-api
 
 ## **Note:**
