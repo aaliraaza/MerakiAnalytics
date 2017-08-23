@@ -6,7 +6,10 @@ https://meraki.cisco.com/solutions/location-analytics
 
 Cisco Meraki Location Analytics displays real-time location statistics to improve customer engagement and loyalty across sites, and is built-in to Cisco Meraki APs with no additional cost or complexity. Data collected by APs is synced with the Cisco Meraki cloud with  the flexibility to feed data into custom applications. Integrate with back-end CRM, drive in-store customer engagement through push notifications, or alert staff to VIP customer visits.
 
-**This solution doesn't need real-time Cisco Meraki setup as it's already got sample data required for end-to-end testing**
+**This solution doesn't need real-time Cisco Meraki setup as it's already got sample data required for end-to-end testing.**
+
+For proper setup please see the following link to get the integration going:
+https://meraki.cisco.com/technologies/location-analytics-api
 
 ## **Note:**
 > This solution is not production ready as it requires security hardening and relevant scaling based on specific customer environments. 
